@@ -8,7 +8,8 @@ Built as my first AI automation project. No CS degree. Started from zero.
 
 ## 📸 Demo
 
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e39f2838-807b-44f7-be5d-ac7e849c93b9" />
+<img src="blob:chrome-untrusted://media-app/23c1bdfa-b812-4535-8aba-965cc58e91f7" alt="Screenshot 2026-03-27 6.45.12 PM.png"/>
+
 
 
 -----
