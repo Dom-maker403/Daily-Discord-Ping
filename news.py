@@ -5,7 +5,7 @@ from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
 
 # --- CONFIGURATION ---
-WEBHOOK_URL = "https://discord.com/api/webhooks/1483247011766730802/SVUxdOEA9_mC5FY37ppQbkY9mrdB91REfT72wtsxgZytQZrnSQ7OFL8dwSZQvyyg8HyM"
+WEBHOOK_URL = "PASTE WEBHOOK HERE"
 KEYWORDS = ["python", "ai", "automation", "llm", "bot", "web scraping", "robot", "alien"]
 
 def get_summary(url):
