@@ -1,17 +1,67 @@
-# AI News Bot
-I built a Python Script that gathers articles from Hacker News every morning. 
-It filters articles based on keywords I choose such as 'tech', 'AI' etc.  
-It gives me a summary using NLP webhook straight to my Dicord server. 
-No manual input is needed and it runs every morning at 6am.
+# 🤖 AI News Bot
 
-## Built with
-- Python
-- BeautifulSoup
-- Sumy
-- Requests
+A Python automation that scrapes Hacker News every morning, filters articles by topic, summarizes them using NLP, and delivers a clean briefing to Discord — automatically, every day at 6AM.
 
-## Status
-Live and Running
+Built as my first AI automation project. No CS degree. Started from zero.
+
+-----
+
+## 📸 Demo
+
+> *(Add a screenshot of your Discord message here — drag and drop an image into GitHub)*
+
+-----
+
+## 🧠 What It Does
+
+1. **Scrapes** Hacker News for the latest headlines using BeautifulSoup
+1. **Filters** articles by keywords relevant to AI, automation, and Python
+1. **Summarizes** each article using NLP (LSA algorithm via Sumy)
+1. **Delivers** the top 3 matches to a Discord channel via webhook
+1. **Runs automatically** every morning at 6AM using a cron job — no manual input needed
+
+-----
+
+## ⚙️ How It Works
+
+```
+Hacker News → Python Scraper → Keyword Filter → NLP Summarizer → Discord
+```
+
+The script is scheduled with `cron` to run daily. Once set up, it runs completely hands-free.
+
+-----
+
+## 🛠️ Built With
+
+|Tool           |Purpose          |
+|---------------|-----------------|
+|Python         |Core language    |
+|BeautifulSoup  |HTML scraping    |
+|Requests       |HTTP calls       |
+|Sumy (LSA)     |NLP summarization|
+|Discord Webhook|Delivery         |
+|Cron           |Scheduling       |
+
+-----
+
+## 🚀 Setup
+
+1. **Clone the repo**
+
+```bash
+git clone https://github.com/YOURUSERNAME/ai-news-bot.git
+cd ai-news-bot
+```
+
+1. **Install dependencies**
+
+```bash
+pip install requests beautifulsoup4 sumy
+```
+
+1. **Add your Discord webhook**
+
+Create a `.env` file in the root folder:
 
 
-<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/fcb0dcba-507f-41c5-94a3-cceacc71790d" />
