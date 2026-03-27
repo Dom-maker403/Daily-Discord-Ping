@@ -8,7 +8,8 @@ Built as my first AI automation project. No CS degree. Started from zero.
 
 ## 📸 Demo
 
-> *(Add a screenshot of your Discord message here — drag and drop an image into GitHub)*
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/e39f2838-807b-44f7-be5d-ac7e849c93b9" />
+
 
 -----
 
@@ -43,25 +44,6 @@ The script is scheduled with `cron` to run daily. Once set up, it runs completel
 |Discord Webhook|Delivery         |
 |Cron           |Scheduling       |
 
------
 
-## 🚀 Setup
-
-1. **Clone the repo**
-
-```bash
-git clone https://github.com/YOURUSERNAME/ai-news-bot.git
-cd ai-news-bot
-```
-
-1. **Install dependencies**
-
-```bash
-pip install requests beautifulsoup4 sumy
-```
-
-1. **Add your Discord webhook**
-
-Create a `.env` file in the root folder:
 
 
