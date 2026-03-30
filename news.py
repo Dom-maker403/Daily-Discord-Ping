@@ -1,12 +1,17 @@
 import requests
+import os
+from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 from sumy.parsers.html import HtmlParser
 from sumy.nlp.tokenizers import Tokenizer
 from sumy.summarizers.lsa import LsaSummarizer
 
+load_dotenv()
 # --- CONFIGURATION ---
-WEBHOOK_URL = "PASTE WEBHOOK HERE"
+WEBHOOK_URL = os.getenv ("https://discord.com/api/webhooks/1483247011766730802/SVUxdOEA9_mC5FY37ppQbkY9mrdB91REfT72wtsxgZytQZrnSQ7OFL8dwSZQvyyg8HyM")
 KEYWORDS = ["python", "ai", "automation", "llm", "bot", "web scraping", "robot", "alien"]
+WEBHOOK_URL = os.getenv ("WEBHOOK_URL")
+KEYWORDS = ["python", " ai ", "automation", "llm", "bot", "web scraping", "robot", "alien"]
 
 def get_summary(url):
     try:
@@ -25,23 +30,24 @@ def get_summary(url):
         return " ".join(clean_sentences) if clean_sentences else "No summary available."
     except:
         return "Click link to read full article."
-
 # --- MAIN EXECUTION ---
 print("🚀 Starting the Research Bot...")
-
 try:
     response = requests.get("https://news.ycombinator.com/")
     soup = BeautifulSoup(response.text, 'html.parser')
     headlines = soup.find_all('span', class_='titleline')
-
     matches = []
     for h in headlines:
         title = h.text
         link = h.find('a')['href']
-        
+
+        link = h.find('a')
+        if link:
+            url = link['href'] 
         if any(word in title.lower() for word in KEYWORDS):
             print(f"🔎 Found match: {title}")
             summary = get_summary(link)
+            summary = get_summary(url)
             matches.append(f"🎯 **{title}**\n📝 *AI Summary:* {summary}\n🔗 {link}")
 
     if matches:
@@ -57,8 +63,5 @@ try:
             print(f"❌ DISCORD ERROR: Status {res.status_code} - {res.text}")
     else:
         print("😴 No matches found for your keywords today.")
-
 except Exception as e:
     print(f"⚠️ SYSTEM ERROR: {e}")
-
-
